@@ -3,21 +3,18 @@
 
 
 
-.side { padding: 4ex; text-align: center; }
 h1 { text-align: center; }
 .score{width: 100%;}
 
 
-.square{
-
-
+.Square{
  border: 1px solid black;
-  
   font-size: 20px;
   font-weight: bold;
   height: 80px;
   padding:10px;
   text-align: center;
+  margin:-1px -1px;
 width: 80px;
 clear:right;
 }
@@ -25,22 +22,25 @@ clear:right;
 .inactive{
 background-color: blue;}
 
-.active {
-background-color: green;} 
+
 
 .but1{
-
 padding:15px;
 float: left;
-width: 25%;} 
+width: 25%;}
+                                                                                                  
 
-
-h2{
-float: left;
-width: 70%;}
-
-#reset{
+h3{
 float:left;
-width : 50%;
+
+}
+
+#status{
+float: right;
+text-align: center;
 color: red;
-fonst-size: 20;}     
+font-size: 20;}
+
+.btn-success{
+float:left;
+width:100%;}                                                                                                                  

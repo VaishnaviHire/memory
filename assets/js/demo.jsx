@@ -176,7 +176,7 @@ grid.map((v,i) => <Square className ={this.setClassNames(v)} onClick = {() => {t
 
 
 function Square(props){
-return (<div class= "but1" >
+return (<div class = "but1" >
         <Button className ={props.className}  onClick ={props.onClick}>
         {props.value}
         </Button></div>);}
@@ -185,12 +185,11 @@ $(loadGame);
 function Score(props)
 {
 return (<div className ="score">
-<h2> Score : {props.value}</h2><br />
-<h2> Clicks: {props.Clicks}</h2><br />
-<div id = "reset">
-<div id = "status"> </div></div>
-<Button className ="btn btn-primary" onClick = {props.onClick}> Reset Game </Button>
-</div>);
+<h3> Score : {props.value}</h3><br />
+<h3> Clicks: {props.Clicks}</h3><br />
+<div id = "status"> </div>
+<div id = "reset"><Button className ="btn btn-success" onClick = {props.onClick}> Reset Game </Button>
+</div></div>);
 }
 
                                     
