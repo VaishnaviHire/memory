@@ -1,6 +1,46 @@
-/* This file is for your main application css. */
 
 @import "bootstrap";
 
+
+
 .side { padding: 4ex; text-align: center; }
 h1 { text-align: center; }
+.score{width: 100%;}
+
+
+.square{
+
+
+ border: 1px solid black;
+  
+  font-size: 20px;
+  font-weight: bold;
+  height: 80px;
+  padding:10px;
+  text-align: center;
+width: 80px;
+clear:right;
+}
+
+.inactive{
+background-color: blue;}
+
+.active {
+background-color: green;} 
+
+.but1{
+
+padding:15px;
+float: left;
+width: 25%;} 
+
+
+h2{
+float: left;
+width: 70%;}
+
+#reset{
+float:left;
+width : 50%;
+color: red;
+fonst-size: 20;}     
