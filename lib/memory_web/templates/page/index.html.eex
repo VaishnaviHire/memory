@@ -1,8 +1,22 @@
-<h1>Memory Game</h1>
+<html>
+<head>
 
-<div id="game">
-  Loading...
+<script>
+function buttonclick(){
+ window.location.href = "/main/" + document.getElementById("game-input").value
+ return false
+}
+</script>
+</head>
+<body>
+<h1 id = "index-page">Memory Game</h1>
+
+<div>
+  <p><input type ="text" id = "game-input"></p>
+<p> <button id = "game-button" onclick = "buttonclick()" class = "btn btn-primary"> Join </button></p>
+<p> </p>
 </div>
-
+</body>
+</html>
 
 

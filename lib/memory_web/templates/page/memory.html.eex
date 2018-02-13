@@ -1,0 +1,12 @@
+<script>
+window.gameName = "<%= @memory %>";
+</script>
+
+<h1>Memory Game :  <%= @memory %></h1>
+
+<div id="game">
+  Loading...
+</div>
+
+
+
