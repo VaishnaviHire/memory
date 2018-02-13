@@ -16,7 +16,7 @@ defmodule Memory.Game do
 
 
 
- def show(prev, index, letter) do
+ def matchSquares(prev, index) do
 	startGridList = prev.startGrid                                                 
   	activeList =  prev.active
   	active1 = prev.active1
@@ -52,13 +52,12 @@ defmodule Memory.Game do
 		active2: active2, active2_pos: active2_pos, clicks: clicks, score: score})
  end
 
- def checks(prev, active1, active2, active1_pos, active2_pos) do
-	activeList = prev.active
-	activeList = List.replace_at(activeList, active1_pos, "?")
-	activeList = List.replace_at(activeList, active2_pos, "?")
-	{active1, active1_pos, active2, active2_pos} = {"None", "","None", ""}
+ def unmatchedSquares(prev, active1_pos, active2_pos) do
+	activeList = prev.active 
+		     |> List.replace_at(active1_pos, "?") 
+		     |> List.replace_at(active2_pos, "?")
 
-	Map.merge(prev, %{active: activeList, active1: active1, active2: active2, active1_pos: active1_pos, active2_pos: active2_pos })
+	Map.merge(prev, %{active: activeList, active1: "None", active2: "None", active1_pos: "", active2_pos: "" })
  end 
 
 

@@ -88,17 +88,17 @@ class Demo extends React.Component{
  timer(){
   
    this.channel.push("updates", 
-	{active1: this.state.active1, active1_pos: this.state.active1_pos, active2: this.state.active2, 
+	{active1_pos: this.state.active1_pos,  
 		active2_pos: this.state.active2_pos}).receive("ok", this.gotView.bind(this))
    clearInterval(this.interval);
 
  }
 
- onSquareClick(value, index)
+ onSquareClick(index)
  {
 	let activeList = this.state.active;
 	if(activeList[index] == "?"){
- 		this.channel.push("onsquareclick", {index: index, letter: value}).receive("ok", this.gotView.bind(this))
+ 		this.channel.push("onsquareclick", {index: index}).receive("ok", this.gotView.bind(this))
 	}
  }
 
@@ -117,7 +117,7 @@ class Demo extends React.Component{
 			<div><Score value = {this.state.score} onClick = {this.reset.bind(this)} Clicks = {this.state.clicks} /></div>
 			<div className ="Grid" id = "Grid">{
 			grid.map((v,i) => <Square className ={this.setClassNames(v)} 
-				  onClick = {this.onSquareClick.bind(this, v,i)} value ={v} key={i} />)}</div>
+				  onClick = {this.onSquareClick.bind(this, i)} value ={v} key={i} />)}</div>
 
  		</div>);
  }
